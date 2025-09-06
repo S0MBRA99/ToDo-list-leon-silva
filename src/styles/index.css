@@ -9,3 +9,50 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+body{
+    background-color: rgb(201, 190, 190);
+}
+
+.box-size{
+    width: 400px;
+    height: 80vh;
+}
+
+.invisibleCloseX{
+    display: none;
+}
+
+.Task:hover .invisibleCloseX{
+    display: block;
+}
+
+.formulario{
+    position: relative;
+}
+
+.formulario::before {
+    content: '';
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    z-index: -1;
+
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: -8px;
+}
+
+.formulario::after {
+    content: '';
+    position: absolute;
+    background: white;
+     border: 1px solid black;
+    z-index: -1;
+
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: -4px;
+}
